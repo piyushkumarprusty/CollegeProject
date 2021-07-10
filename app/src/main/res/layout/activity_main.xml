@@ -121,7 +121,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/addGalleryImage"
+            android:id="@+id/faculty"
             android:layout_width="130dp"
             android:layout_height="130dp"
             android:layout_margin="10dp"
@@ -134,9 +134,9 @@
                 <ImageView
                     android:layout_width="65dp"
                     android:layout_height="64dp"
-                    android:background="@drawable/circle_purple"
+                    android:background="@drawable/circle_yellow"
                     android:padding="10dp"
-                    android:src="@drawable/ic_gallery" />
+                    android:src="@drawable/ic_group" />
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"

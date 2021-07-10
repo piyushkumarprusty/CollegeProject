@@ -88,7 +88,7 @@
         android:layout_margin="5dp"
         android:gravity="center">
         <androidx.cardview.widget.CardView
-            android:id="@+id/addNotice"
+            android:id="@+id/addEbook"
             android:layout_width="130dp"
             android:layout_height="130dp"
             android:layout_margin="10dp"
@@ -101,9 +101,9 @@
                 <ImageView
                     android:layout_width="65dp"
                     android:layout_height="64dp"
-                    android:background="@drawable/circle_pink"
+                    android:background="@drawable/circle_red"
                     android:padding="10dp"
-                    android:src="@drawable/ic_notice" />
+                    android:src="@drawable/ic_upload" />
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
@@ -113,7 +113,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:text="Upload Notice"
+                    android:text="Upload Ebook"
                     android:textColor="@color/black"
                     android:textAlignment="center"
                     android:textStyle="bold"/>

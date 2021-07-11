@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (v.getId()) {
             case R.id.addNotice:
                 startActivity(new Intent(MainActivity.this, UploadNotice.class));
+                break;
         }
 
     }

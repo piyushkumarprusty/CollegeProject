@@ -53,24 +53,36 @@
         </androidx.cardview.widget.CardView>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-           android:layout_marginTop="16dp"
-            android:layout_height="match_parent">
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="16dp">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/noticeTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Notice title"
-                android:id="@+id/noticeTitle"/>
+                android:hint="Notice title" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/uploadNoticeBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-android:text="Upload Notice"
-            android:textAllCaps="false"
             android:layout_marginTop="16dp"
-            android:id="@+id/uploadNoticeBtn"/>
+            android:text="Upload Notice"
+            android:textAllCaps="false" />
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="400dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:id="@+id/noticeImageView"/>
+
+
+        </com.google.android.material.card.MaterialCardView>
     </LinearLayout>
 </ScrollView>

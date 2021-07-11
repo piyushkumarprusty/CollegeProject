@@ -27,7 +27,7 @@
                 <ImageView
                     android:layout_width="65dp"
                     android:layout_height="64dp"
-                    android:background="@drawable/circle_pink"
+                    android:background="@drawable/circle_blue"
                     android:padding="10dp"
                     android:src="@drawable/ic_notice" />
                 <View
@@ -177,7 +177,7 @@
                 <ImageView
                     android:layout_width="65dp"
                     android:layout_height="64dp"
-                    android:background="@drawable/circle_blue"
+                    android:background="@drawable/circle_pink"
                     android:padding="10dp"
                     android:src="@drawable/ic_delete" />
                 <View

@@ -15,6 +15,8 @@ import android.widget.EditText;
 import android.widget.ImageView;
 
 import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 
 import java.io.ByteArrayOutputStream;
@@ -38,6 +40,8 @@ public class UploadNotice extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_upload_notice);
 
+        reference = FirebaseDatabase.getInstance().getReference();
+        storageReference = FirebaseStorage.getInstance().getReference();
 
         noticeImageView = findViewById(R.id.noticeImageView);
         addImage = findViewById(R.id.addImage);
@@ -55,12 +59,12 @@ public class UploadNotice extends AppCompatActivity {
         uploadNoticeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(NoticeTitle.getText().toString().isEmpty()){
+                if (NoticeTitle.getText().toString().isEmpty()) {
                     NoticeTitle.setError("Empty");
                     NoticeTitle.requestFocus();
-                }else if (bitmap==null){
+                } else if (bitmap == null) {
                     uploadData();
-                }else {
+                } else {
                     uploadImage();
                 }
             }
@@ -70,10 +74,11 @@ public class UploadNotice extends AppCompatActivity {
 
     private void uploadImage() {
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
-        bitmap.compress(Bitmap.CompressFormat.JPEG,50,baos);
+        bitmap.compress(Bitmap.CompressFormat.JPEG, 50, baos);
         byte[] finalimg = baos.toByteArray();
         final StorageReference filepath;
     }
+
     private void uploadData() {
     }
 

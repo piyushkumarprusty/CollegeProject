@@ -10,6 +10,8 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 
 import java.io.IOException;
@@ -19,6 +21,9 @@ public class UploadNotice extends AppCompatActivity {
 
     private CardView addImage;
     ImageView noticeImageView;
+    private EditText NoticeTitle;
+    private Button uploadNoticeBtn;
+
     private final int REQ = 1;
     Bitmap bitmap;
 
@@ -30,6 +35,8 @@ public class UploadNotice extends AppCompatActivity {
 
         noticeImageView = findViewById(R.id.noticeImageView);
         addImage = findViewById(R.id.addImage);
+        NoticeTitle = findViewById(R.id.noticeTitle);
+        uploadNoticeBtn = findViewById(R.id.uploadNoticeBtn);
 
 
         addImage.setOnClickListener(new View.OnClickListener() {
@@ -39,6 +46,26 @@ public class UploadNotice extends AppCompatActivity {
             }
         });
 
+        uploadNoticeBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(NoticeTitle.getText().toString().isEmpty()){
+                    NoticeTitle.setError("Empty");
+                    NoticeTitle.requestFocus();
+                }else if (bitmap==null){
+                    uploadData();
+                }else {
+                    uploadImage();
+                }
+            }
+        });
+
+    }
+
+    private void uploadImage() {
+
+    }
+    private void uploadData() {
     }
 
     private void openGaller() {
@@ -60,4 +87,4 @@ public class UploadNotice extends AppCompatActivity {
             noticeImageView.setImageBitmap(bitmap);
         }
     }
-}
+} 

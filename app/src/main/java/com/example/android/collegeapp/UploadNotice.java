@@ -14,6 +14,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.storage.StorageReference;
+
+import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 
 public class UploadNotice extends AppCompatActivity {
@@ -25,7 +29,9 @@ public class UploadNotice extends AppCompatActivity {
     private Button uploadNoticeBtn;
 
     private final int REQ = 1;
-    Bitmap bitmap;
+    private Bitmap bitmap;
+    private DatabaseReference reference;
+    private StorageReference storageReference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,7 +69,10 @@ public class UploadNotice extends AppCompatActivity {
     }
 
     private void uploadImage() {
-
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        bitmap.compress(Bitmap.CompressFormat.JPEG,50,baos);
+        byte[] finalimg = baos.toByteArray();
+        final StorageReference filepath;
     }
     private void uploadData() {
     }
